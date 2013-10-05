@@ -1,0 +1,80 @@
+---
+title       : Swirl with Slidify
+author      : Ramnath Vaidyanathan
+hitheme     : solarized_light
+widgets     : [bootstrap, quiz, shiny, interactive]
+mode        : selfcontained
+--- #slide1
+
+## Slide 1
+
+Today, I'll be teaching you the basics of data analysis. It probably makes sense to start by defining the word DATA.
+
+<script>
+$(document).ready(function(){
+  $('#slide1 article p').typewrite()
+})
+</script>
+
+---
+
+## Slide 2
+
+Here is a diagram showing the relationship between a population and a sample.
+
+```{r echo = F}
+plot(0,xlim=c(-10,10),ylim=c(-10,10),type="n",xlab="",ylab="",bty="n",xaxt="n",yaxt="n", main="Population vs. Sample")
+draw.circle(0,0,7,border="black",col="yellow")
+draw.circle(3,0,3,border="black",col="red")
+text(-3.5,0,"Population", font=2)
+text(3,0,"Sample", font=2)
+```
+
+--- &radio
+
+## Slide 3
+
+Let's quickly test your understanding of the term REPRESENTATIVE. If you were interested in studying the health of men living in the US, ages 18-25, which sample would be more representative of the target population: a sample of 50 men who live in a nearby retirement home, or a sample of 50 men who are students at a local university?
+
+1. Men living at the retirement home
+2. _College students_
+
+<div class="progress source">
+  <div class="bar" style="width: 60%;"></div>
+</div>
+
+*** .hint
+
+This is a hint
+
+--- &interactive
+
+## Slide 5
+
+To illustrate these concepts, we will now look at a real life dataset. Type 'cars' and press Enter to see the dataset we'll be working with.
+
+```{r opts.label = 'interactive', results = 'markup', eval = F, cache = F}
+head(cars)
+```
+
+--- &submitcompare1
+
+Mean, median, and mode are all measures of
+
+--- &interactive
+
+To illustrate these concepts, we will now look at a real life dataset. Type 'cars' and press Enter to see the dataset we'll be working with.
+
+```{r opts.label = 'interactive', eval = F, cache = F}
+cars
+```
+
+*** =hint
+
+Type 'cars' and press Enter. Do not use quotes, spaces, or uppercase letters.
+
+
+
+
+
+
